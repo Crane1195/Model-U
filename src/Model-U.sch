@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Model U"
-Date "2021-6-22"
-Rev "v1"
+Title "Model S"
+Date "2021-08-08"
+Rev "v2"
 Comp "Crane's Lab"
 Comment1 ""
 Comment2 ""
@@ -21,21 +21,10 @@ U 1 1 5DB4DBE8
 P 3750 3400
 F 0 "J1" H 3400 4450 50  0000 C CNN
 F 1 "USB_C_Receptacle" H 3750 4550 50  0000 C CNN
-F 2 "Model_S:Shou Han Type-C 24P QCHT" H 3900 3400 50  0001 C CNN
+F 2 "Model_S:1054500101" H 3900 3400 50  0001 C CNN
 F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 3900 3400 50  0001 C CNN
 	1    3750 3400
 	1    0    0    -1  
-$EndComp
-$Comp
-L Model-U-rescue:VBUS-Model_S #PWR0125
-U 1 1 5DB54DEB
-P 4350 2400
-F 0 "#PWR0125" H 4350 2250 50  0001 C CNN
-F 1 "VBUS" V 4365 2528 50  0000 L CNN
-F 2 "" H 4350 2400 50  0001 C CNN
-F 3 "" H 4350 2400 50  0001 C CNN
-	1    4350 2400
-	0    1    1    0   
 $EndComp
 Text GLabel 4350 2900 2    50   Input ~ 0
 D-
@@ -145,4 +134,61 @@ Text GLabel 4350 4300 2    50   Input ~ 0
 TX-
 Text GLabel 4350 3700 2    50   Input ~ 0
 TX-
+$Comp
+L Device:R R1
+U 1 1 60EB2DC0
+P 5050 2600
+F 0 "R1" V 4950 2600 50  0000 C CNN
+F 1 "R" V 5050 2600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4980 2600 50  0001 C CNN
+F 3 "~" H 5050 2600 50  0001 C CNN
+	1    5050 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L Model-U-rescue:VBUS-Model_S #PWR0125
+U 1 1 5DB54DEB
+P 4350 2400
+F 0 "#PWR0125" H 4350 2250 50  0001 C CNN
+F 1 "VBUS" V 4365 2528 50  0000 L CNN
+F 2 "" H 4350 2400 50  0001 C CNN
+F 3 "" H 4350 2400 50  0001 C CNN
+	1    4350 2400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4900 2600 4350 2600
+$Comp
+L Device:R R2
+U 1 1 60EB5FA1
+P 5050 2700
+F 0 "R2" V 4950 2700 50  0000 C CNN
+F 1 "R" V 5050 2700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4980 2700 50  0001 C CNN
+F 3 "~" H 5050 2700 50  0001 C CNN
+	1    5050 2700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4350 2700 4900 2700
+$Comp
+L Model-U-rescue:GND-Model_S #PWR0103
+U 1 1 60EB6C01
+P 5300 2800
+F 0 "#PWR0103" H 5300 2550 50  0001 C CNN
+F 1 "GND" H 5305 2627 50  0000 C CNN
+F 2 "" H 5300 2800 50  0001 C CNN
+F 3 "" H 5300 2800 50  0001 C CNN
+	1    5300 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 2700 5300 2700
+Wire Wire Line
+	5300 2700 5300 2800
+Wire Wire Line
+	5200 2600 5300 2600
+Wire Wire Line
+	5300 2600 5300 2700
+Connection ~ 5300 2700
 $EndSCHEMATC
