@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Model S"
-Date "2021-08-08"
-Rev "v2"
+Title "Model U"
+Date "2021-09-18"
+Rev "v3"
 Comp "Crane's Lab"
 Comment1 ""
 Comment2 ""
@@ -57,10 +57,10 @@ Text Notes 4700 2450 0    59   ~ 0
 (5V)
 Text Notes 4650 3300 1    59   ~ 0
 (USB Data)
-Text Notes 4550 3650 0    59   ~ 0
-GC\nData
-Text Notes 4550 4250 0    59   ~ 0
-GC\nData
+Text Notes 4550 3550 0    59   ~ 0
+GC Data
+Text Notes 4550 4150 0    59   ~ 0
+GC Data
 Text Notes 4550 3850 0    59   ~ 0
 3.3V
 Text Notes 4550 4450 0    59   ~ 0
@@ -139,7 +139,7 @@ L Device:R R1
 U 1 1 60EB2DC0
 P 5050 2600
 F 0 "R1" V 4950 2600 50  0000 C CNN
-F 1 "R" V 5050 2600 50  0000 C CNN
+F 1 "5.1k" V 5050 2600 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 4980 2600 50  0001 C CNN
 F 3 "~" H 5050 2600 50  0001 C CNN
 	1    5050 2600
@@ -163,7 +163,7 @@ L Device:R R2
 U 1 1 60EB5FA1
 P 5050 2700
 F 0 "R2" V 4950 2700 50  0000 C CNN
-F 1 "R" V 5050 2700 50  0000 C CNN
+F 1 "5.1k" V 5050 2700 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 4980 2700 50  0001 C CNN
 F 3 "~" H 5050 2700 50  0001 C CNN
 	1    5050 2700
