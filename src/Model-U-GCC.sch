@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Model U"
-Date "2021-09-18"
-Rev "v3"
+Title "Model U GCC"
+Date "2021-11-24"
+Rev "v1"
 Comp "Crane's Lab"
 Comment1 ""
 Comment2 ""
@@ -16,12 +16,12 @@ $EndDescr
 Text GLabel 4350 4100 2    50   Input ~ 0
 D3V
 $Comp
-L Model-U-rescue:USB_C_Receptacle-Model_S J1
+L Model-U-GCC-rescue:USB_C_Receptacle-Model_S J1
 U 1 1 5DB4DBE8
 P 3750 3400
 F 0 "J1" H 3400 4450 50  0000 C CNN
 F 1 "USB_C_Receptacle" H 3750 4550 50  0000 C CNN
-F 2 "Model_S:1054500101" H 3900 3400 50  0001 C CNN
+F 2 "Model_S:Shou Han Type-C 24P QCHT" H 3900 3400 50  0001 C CNN
 F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 3900 3400 50  0001 C CNN
 	1    3750 3400
 	1    0    0    -1  
@@ -37,7 +37,7 @@ D+
 Text GLabel 4350 3500 2    50   Input ~ 0
 D3V
 $Comp
-L Model-U-rescue:GND-Model_S #PWR0122
+L Model-U-GCC-rescue:GND-Model_S #PWR0122
 U 1 1 5DB56427
 P 3750 5100
 F 0 "#PWR0122" H 3750 4850 50  0001 C CNN
@@ -69,71 +69,48 @@ Wire Wire Line
 	3450 5000 3750 5000
 Connection ~ 3750 5000
 Text Notes 7800 6950 0    157  ~ 0
-Model U
+Model U GCC
 $Comp
-L Model-U-rescue:Conn_01x04-Model_S J2
+L Connector_Generic:Conn_01x02 J3
 U 1 1 60AD4395
-P 5550 3600
-F 0 "J2" H 5550 3800 50  0000 C CNN
-F 1 "Conn_01x04" H 5350 3900 50  0000 C CNN
-F 2 "Model_S:PinHeader_1x04_P2.54mm_Vertical" H 5550 3600 50  0001 C CNN
-F 3 "~" H 5550 3600 50  0001 C CNN
-	1    5550 3600
+P 6100 3950
+F 0 "J3" H 6200 4000 50  0000 C CNN
+F 1 "Conn_01x02" H 6100 4150 50  0000 C CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 6100 3950 50  0001 C CNN
+F 3 "~" H 6100 3950 50  0001 C CNN
+	1    6100 3950
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Model-U-rescue:GND-Model_S #PWR0101
+L Model-U-GCC-rescue:GND-Model_S #PWR0101
 U 1 1 60ADB0E6
-P 6550 3500
-F 0 "#PWR0101" H 6550 3250 50  0001 C CNN
-F 1 "GND" V 6550 3400 50  0000 R CNN
-F 2 "" H 6550 3500 50  0001 C CNN
-F 3 "" H 6550 3500 50  0001 C CNN
-	1    6550 3500
+P 6650 2800
+F 0 "#PWR0101" H 6650 2550 50  0001 C CNN
+F 1 "GND" V 6650 2700 50  0000 R CNN
+F 2 "" H 6650 2800 50  0001 C CNN
+F 3 "" H 6650 2800 50  0001 C CNN
+	1    6650 2800
 	0    1    1    0   
 $EndComp
-Text GLabel 5750 3500 2    50   Input ~ 0
+Text GLabel 6650 2700 0    50   Input ~ 0
 D3V
-Text GLabel 5750 3600 2    50   Input ~ 0
-RX-
 $Comp
-L Model-U-rescue:VBUS-Model_S #PWR0102
+L Model-U-GCC-rescue:VBUS-Model_S #PWR0102
 U 1 1 60ADCD5C
-P 6550 3800
-F 0 "#PWR0102" H 6550 3650 50  0001 C CNN
-F 1 "VBUS" V 6550 3900 50  0000 L CNN
-F 2 "" H 6550 3800 50  0001 C CNN
-F 3 "" H 6550 3800 50  0001 C CNN
-	1    6550 3800
+P 6650 2600
+F 0 "#PWR0102" H 6650 2450 50  0001 C CNN
+F 1 "VBUS" V 6650 2700 50  0000 L CNN
+F 2 "" H 6650 2600 50  0001 C CNN
+F 3 "" H 6650 2600 50  0001 C CNN
+	1    6650 2600
 	0    -1   -1   0   
 $EndComp
-Text GLabel 5750 3700 2    50   Input ~ 0
+Text GLabel 6300 3950 2    50   Input ~ 0
 D-
-Text GLabel 5750 3800 2    50   Input ~ 0
+Text GLabel 6300 4050 2    50   Input ~ 0
 D+
-Text GLabel 6550 3600 0    50   Input ~ 0
+Text GLabel 6650 2500 0    50   Input ~ 0
 3V3
-Text GLabel 6550 3700 0    50   Input ~ 0
-TX-
-$Comp
-L Model-U-rescue:Conn_01x04-Model_S J3
-U 1 1 60AD66A5
-P 6750 3600
-F 0 "J3" H 6700 3800 50  0000 L CNN
-F 1 "Conn_01x04" H 6350 3900 50  0000 L CNN
-F 2 "Model_S:PinHeader_1x04_P2.54mm_Vertical" H 6750 3600 50  0001 C CNN
-F 3 "~" H 6750 3600 50  0001 C CNN
-	1    6750 3600
-	1    0    0    -1  
-$EndComp
-Text GLabel 4350 3400 2    50   Input ~ 0
-RX-
-Text GLabel 4350 4000 2    50   Input ~ 0
-RX-
-Text GLabel 4350 4300 2    50   Input ~ 0
-TX-
-Text GLabel 4350 3700 2    50   Input ~ 0
-TX-
 $Comp
 L Device:R R1
 U 1 1 60EB2DC0
@@ -146,7 +123,7 @@ F 3 "~" H 5050 2600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Model-U-rescue:VBUS-Model_S #PWR0125
+L Model-U-GCC-rescue:VBUS-Model_S #PWR0125
 U 1 1 5DB54DEB
 P 4350 2400
 F 0 "#PWR0125" H 4350 2250 50  0001 C CNN
@@ -172,7 +149,7 @@ $EndComp
 Wire Wire Line
 	4350 2700 4900 2700
 $Comp
-L Model-U-rescue:GND-Model_S #PWR0103
+L Model-U-GCC-rescue:GND-Model_S #PWR0103
 U 1 1 60EB6C01
 P 5300 2800
 F 0 "#PWR0103" H 5300 2550 50  0001 C CNN
@@ -191,4 +168,37 @@ Wire Wire Line
 Wire Wire Line
 	5300 2600 5300 2700
 Connection ~ 5300 2700
+$Comp
+L Connector_Generic:Conn_01x06 J2
+U 1 1 619EBF64
+P 6850 2700
+F 0 "J2" H 6930 2692 50  0000 L CNN
+F 1 "Conn_01x06" H 6930 2601 50  0000 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x06_P2.00mm_Vertical" H 6850 2700 50  0001 C CNN
+F 3 "~" H 6850 2700 50  0001 C CNN
+	1    6850 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Model-U-GCC-rescue:GND-Model_S #PWR0104
+U 1 1 619EF829
+P 6650 2900
+F 0 "#PWR0104" H 6650 2650 50  0001 C CNN
+F 1 "GND" V 6650 2800 50  0000 R CNN
+F 2 "" H 6650 2900 50  0001 C CNN
+F 3 "" H 6650 2900 50  0001 C CNN
+	1    6650 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L Model-U-GCC-rescue:GND-Model_S #PWR0105
+U 1 1 619EFEBB
+P 6650 3000
+F 0 "#PWR0105" H 6650 2750 50  0001 C CNN
+F 1 "GND" V 6650 2900 50  0000 R CNN
+F 2 "" H 6650 3000 50  0001 C CNN
+F 3 "" H 6650 3000 50  0001 C CNN
+	1    6650 3000
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
